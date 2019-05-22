@@ -14,12 +14,13 @@ puts 'Creating Ingredients'
 lemon = Ingredient.create!(name: 'lemon')
 ice = Ingredient.create!(name: 'ice')
 rhum = Ingredient.create!(name: 'rhum')
-mint_leaves = Ingredient.create!(name: 'mint leaves')
-strawberry = Ingredient.create!(name: 'strawberry')
+banana = Ingredient.create!(name: 'banana')
+mango = Ingredient.create!(name: 'mango')
 
 puts 'Creating Cocktails'
-strawberry_mojito = Cocktail.create!(name: 'Strawberry mojito')
-classic_mojito = Cocktail.create!(name: 'Classic mojito')
+mango_mojito = Cocktail.create!(name: 'Mango mojito')
+lemon_mojito = Cocktail.create!(name: 'Lemon mojito')
+banana_mojito = Cocktail.create!(name: 'Banana mojito')
 
 puts "created #{Cocktail.count} cocktails"
 
@@ -29,48 +30,48 @@ puts 'Creating Doses'
 Dose.create!({
   description: "Add 10 cubes",
   ingredient: ice,
-  cocktail: strawberry_mojito
+  cocktail: mango_mojito
 })
 Dose.create!({
   description: "Add 2 slices",
   ingredient: lemon,
-  cocktail: strawberry_mojito
+  cocktail: mango_mojito
 })
 
 Dose.create!({
-  description: "Mix frozen berries",
-  ingredient: strawberry,
-  cocktail: strawberry_mojito
+  description: "Mix frozen mango",
+  ingredient: mango,
+  cocktail: mango_mojito
 })
 
 Dose.create!({
   description: "Pour half a glass",
   ingredient: rhum,
-  cocktail: strawberry_mojito
+  cocktail: lemon_mojito
   })
 
 #Classic Mojito
 Dose.create!({
   description: "Add 10 cubes",
   ingredient: ice,
-  cocktail: classic_mojito
+  cocktail: lemon_mojito
 })
 Dose.create!({
   description: "Add 2 slices",
   ingredient: lemon,
-  cocktail: classic_mojito
+  cocktail: lemon_mojito
 })
 
 Dose.create!({
-  description: "Mix a handful of leaves",
-  ingredient: mint_leaves,
-  cocktail: classic_mojito
+  description: "Mix a handful of bananas",
+  ingredient: banana,
+  cocktail: banana_mojito
 })
 
 Dose.create!({
   description: "Pour half a glass",
   ingredient: rhum,
-  cocktail: classic_mojito
+  cocktail: banana_mojito
 })
 
 puts 'Finish'
