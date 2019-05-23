@@ -1,5 +1,6 @@
 class CocktailsController < ApplicationController
   mount_uploader :photo, PhotoUploader
+
   def index
     @cocktails = Cocktail.all
   end
